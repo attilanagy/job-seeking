@@ -21,7 +21,7 @@ const INITIAL_QUESTIONS = [
   },
   {
     id: "culture-fit-interview",
-    question: "Does the discussion with the hiring manager preseed the technical round in the hirigin process?",
+    question: "Does the discussion with the hiring manager preseed the technical round in the process?",
     answer: null,
     reason: "You probably heard the phrase: culture eats strategy for breakfast."
   },
