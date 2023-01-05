@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders bootstrap grid rows', () => {
+  const { container } = render(<App />);
+  const rows = container.getElementsByClassName('row');
+
+  expect(rows.length).toBeGreaterThan(0);
 });

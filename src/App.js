@@ -57,8 +57,8 @@ function App() {
     <div className="App">
       <Container>
       {questions.map(question => (
-        <Row>
-            <Col key={question.id}>
+        <Row key={question.id}>
+            <Col>
               <Card bg={question.answer !== null ? question.answer ? 'success' : 'danger' : 'light'}>
                 <Card.Body>
                   <Card.Text>{question.answer === null ? question.question : question.reason}</Card.Text>
