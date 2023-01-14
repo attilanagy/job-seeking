@@ -59,7 +59,7 @@ function App() {
       {questions.map(question => (
         <Row key={question.id}>
             <Col>
-              <Card bg={question.answer !== null ? question.answer ? 'success' : 'danger' : 'light'}>
+              <Card text="white" bg={question.answer !== null ? question.answer ? 'success' : 'danger' : 'secondary'}>
                 <Card.Body>
                   <Card.Text>{question.answer === null ? question.question : question.reason}</Card.Text>
                   {question.answer === null ?
