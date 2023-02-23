@@ -1,12 +1,7 @@
-import { useState } from 'react';
 import './App.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import Criteria from './components/Criteria';
 
-const INITIAL_QUESTIONS = [
+const INITIAL_CRITERIA = [
   {
     id: "remote-work",
     question: "Is the position fully remote?",
@@ -39,46 +34,10 @@ const INITIAL_QUESTIONS = [
   }
 ]
 
-function App() {
-  const [questions, setQuestions] = useState(INITIAL_QUESTIONS)
-  const answerQuestion = (questionId, answer) => {
-    const newQuestionList = questions.map(question => {
-      if (question.id === questionId) {
-        const updatedQuestion = {...question, answer: answer}
-        return updatedQuestion
-      }
-      return question
-    })
-
-    setQuestions(newQuestionList)
-  }
-
+const App = () => {
   return (
     <div className="App">
-      <Container>
-      {questions.map(question => (
-        <Row key={question.id}>
-            <Col>
-              <Card text="white" bg={question.answer !== null ? question.answer ? 'success' : 'danger' : 'secondary'}>
-                <Card.Body>
-                  <Card.Text>{question.answer === null ? question.question : question.reason}</Card.Text>
-                  {question.answer === null ?
-                    <>
-                      <Button variant="success" onClick={() => answerQuestion(question.id, true)}>Yes</Button>&nbsp;
-                      <Button variant="danger" onClick={() => answerQuestion(question.id, false)}>No</Button>
-                    </>
-                    :
-                    <>
-                      <Button variant="dark">Yes</Button>&nbsp;
-                      <Button variant="dark">No</Button>
-                    </>
-                  }
-                </Card.Body>
-              </Card>
-            </Col>
-        </Row>
-      ))}
-      </Container>
+        <Criteria initialCriteria={INITIAL_CRITERIA}/>
     </div>
   );
 }
