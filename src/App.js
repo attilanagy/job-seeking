@@ -30,7 +30,7 @@ const INITIAL_CRITERIA = [
     id: "linux-workstation",
     question: "Can I install Linux on my workstation?",
     answer: null,
-    reason: "Nowadays everything is running in a container, even automated tests. It's still the easiest to work with containers on a Linux based machines.",
+    reason: "Nowadays everything is running in a container, even automated tests. It's still the easiest to work with containers on a Linux based machine.",
   }
 ]
 
