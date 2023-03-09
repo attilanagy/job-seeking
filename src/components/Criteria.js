@@ -21,6 +21,7 @@ const Criteria = ({initialCriteria}) => {
             {criteria.map(criterion => (
                 <Row key={criterion.id}>
                     <Criterion
+                        title={criterion.title}
                         question={criterion.question}
                         answer={criterion.answer}
                         reason={criterion.reason}

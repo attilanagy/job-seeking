@@ -10,11 +10,16 @@ describe('unanswered question', () => {
         myNoHandler = jest.fn();
 
         render(<Criterion
+            title={"myTitle"}
             question={"myQuestion"}
             answer={null}
             reason={"myReason"}
             yesHandler={myYesHandler}
             noHandler={myNoHandler} />);
+    });
+
+    test('renders title properly', () => {
+        expect(screen.getByText('myTitle')).toBeInTheDocument();
     });
 
     test('renders body properly', () => {
@@ -52,11 +57,16 @@ describe('unanswered question', () => {
     describe('answered question - ' + testCase.name, () => {
         beforeEach(() => {
             render(<Criterion
+                title={"myTitle"}
                 question={"myQuestion"}
                 answer={testCase.answer}
                 reason={"myReason"}
                 yesHandler={jest.fn()}
                 noHandler={jest.fn()} />);
+        });
+
+        test('renders title properly', () => {
+            expect(screen.getByText('myTitle')).toBeInTheDocument();
         });
     
         test('renders body properly', () => {

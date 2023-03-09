@@ -2,11 +2,12 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const Criterion = ({question, answer, reason, yesHandler, noHandler}) => {
+const Criterion = ({title, question, answer, reason, yesHandler, noHandler}) => {
     return (
         <Col>
             <Card text="white" bg={answer !== null ? answer ? 'success' : 'danger' : 'secondary'}>
                 <Card.Body>
+                    <Card.Title>{title}</Card.Title>
                     <Card.Text>{answer === null ? question : reason}</Card.Text>
                     {answer === null ?
                     <>
