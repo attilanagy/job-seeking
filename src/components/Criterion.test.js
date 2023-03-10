@@ -38,7 +38,12 @@ describe('unanswered question', () => {
 
     test('has proper background', () => {
         const cardElement = screen.getByText('myQuestion').parentElement.parentElement;
-        expect(cardElement).toHaveClass('bg-secondary');
+        expect(cardElement).toHaveClass('bg-light');
+    });
+
+    test('has proper text color', () => {
+        const cardElement = screen.getByText('myQuestion').parentElement.parentElement;
+        expect(cardElement).toHaveClass('text-dark');
     });
 
     test('yes button has proper class', () => {
@@ -76,6 +81,11 @@ describe('unanswered question', () => {
         test('has proper background', () => {
             const cardElement = screen.getByText('myReason').parentElement.parentElement;
             expect(cardElement).toHaveClass(testCase.expectedClass);
+        });
+
+        test('has proper text color', () => {
+            const cardElement = screen.getByText('myReason').parentElement.parentElement; 
+            expect(cardElement).toHaveClass('text-light');
         });
 
         test('yes button has proper class', () => {
