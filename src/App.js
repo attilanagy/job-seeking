@@ -10,11 +10,11 @@ const INITIAL_CRITERIA = [
     reason: "Covid 19 changed everything. Companies learned how to operate their organization fully remote. We should utilize this knowledge to save commute time."
   },
   {
-    id: "no-services-company",
-    title: "Contribution",
-    question: "Can I directly contribute to product development?",
+    id: "cross-functional-team",
+    title: "Cross-functional Team",
+    question: "Can I work in a cross-functional team?",
     answer: null,
-    reason: "I would like to see the real meaning of my daily effort, so I would like to work as a regular employee."
+    reason: "I have already built a senior career in several fields inside IT. Stepping out of my comfort zone is daily practice."
   },
   {
     id: "culture-fit-interview",
